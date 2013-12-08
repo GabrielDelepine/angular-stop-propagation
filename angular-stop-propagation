@@ -1,0 +1,21 @@
+/*
+* angular-stop-propagation v0.1
+* Written by Gabriel Delépine
+* License: MIT
+* https://github.com/Yappli/angular-stop-propagation/
+*/
+angular.module('angular.stop.propagation', [])
+.directive('stopPropagation', [function()
+{
+    return {
+        retrict: 'A',
+        priority: 1,
+    //    terminal: true, // It breaks the scope. I don't know why.
+        link: function(scope, elm, attr)
+        {
+            elm.bind(attr.stopPropagation == '' ? "click" : attr.stopPropagation,function (e) {
+                e.stopPropagation();
+            });
+        }
+    };
+}]);
