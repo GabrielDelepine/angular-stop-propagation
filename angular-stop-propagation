@@ -10,7 +10,6 @@ angular.module('angular.stop.propagation', [])
     return {
         retrict: 'A',
         priority: 1,
-    //    terminal: true, // It breaks the scope. I don't know why.
         link: function(scope, elm, attr)
         {
             elm.bind(attr.stopPropagation == '' ? "click" : attr.stopPropagation,function (e) {
