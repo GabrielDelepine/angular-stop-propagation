@@ -8,7 +8,7 @@ angular.module('angular.stop.propagation', [])
 .directive('stopPropagation', [function()
 {
     return {
-        retrict: 'A',
+        restrict: 'A',
         priority: 1,
         link: function(scope, elm, attr)
         {
